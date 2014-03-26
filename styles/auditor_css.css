@@ -1,0 +1,11 @@
+.total_col_tr
+{
+	background:#474646;
+	color:white;
+}
+.rectify_row:hover
+{
+	background:#202020;
+	color:white;
+	cursor:pointer;
+}

@@ -1,0 +1,182 @@
+html
+{
+	margin:0px;
+}
+body
+{
+	width:100%;
+	height:100%;
+	margin:0px;
+	background:#f3f3f3;
+}
+.main
+{
+	width:990px;
+	margin:auto;
+}
+.main_box
+{
+	float:left;
+	width:100%;
+	background:white;
+	box-shadow: 0px 0px 5px #bababa;
+}
+.header
+{
+	float:left;
+	width:100%;
+}
+.logo
+{
+	float:left;
+	padding:25px 25px 25px 35px;
+}
+.heading
+{
+	float:left;
+	width:620px;
+	height:155px;
+	text-align:center;
+	font-family: arial;
+	color: #474646;
+	line-height:100px;
+}
+.content
+{
+	float:left;
+	width:100%;
+	height:500px;
+}
+.tab_list 
+{
+	float:left;
+	width:100%;
+	background:#da231b;
+	box-shadow: 0px 0px 5px #bababa;
+}
+.tabs
+{
+	float:left;
+	list-style:none;
+	padding-left:0px;
+	margin:0px;
+}
+.tabs_options
+{
+	float:left;
+	padding:10px 35px 10px 35px;
+	color:white;
+	font-family:arial;
+	font-size:17px;
+}
+.tabs_options a:link
+{
+	color:white;
+	text-decoration:none;
+	
+}
+.tabs_options a:visited
+{
+	color:white;
+	text-decoration:none;
+	
+}
+.tabs_options a:hover
+{
+	color:white;
+	text-decoration:underline;
+	
+}
+.tabs_options a:active
+{
+	color:white;
+	text-decoration:underline;
+	
+}
+.content_main
+{
+	float:left;
+	width:700px;
+	font-family:arial;
+	color: #474646;
+	font-size:14px;
+	box-shadow: 0px 0px 5px #bababa;
+	padding:0px 15px 15px 15px;
+	height:440px;
+}
+.content_heading
+{
+	float:left;
+	width:100%;
+	text-align:center;
+	color:#4ca429;
+	font-style:italic;
+}
+.login
+{
+	float:left;
+	width:229px;
+	font-family:arial;
+	padding:15px 15px 15px 15px;
+	box-shadow: 0px 0px 2px #bababa;
+}
+.login_field
+{
+	box-shadow:0px 0px 5px #bababa;
+	border:none;
+	width:150px;
+	padding:10px 10px 10px 10px;
+	margin:0px 0px 10px 0px;
+}
+.login_style
+{
+	float:left;
+	padding:15px 29px;
+	width:170px;
+}
+.button
+{
+	width:120px;
+	margin:0px 25px 0px 25px;
+	padding:0px;
+	height:30px;
+	background:#da231b;
+	border:none;
+	color:white;
+	font-family:arial;
+	box-shadow:0px 0px 5px #bababa;
+}
+.info
+{
+	float:left;
+	width:229px;
+	height:224px;
+	font-family:arial;
+	padding:15px 15px 15px 15px;
+	box-shadow: 0px 0px 2px #bababa;
+}
+.official
+{
+	float:left;
+	width:229px;
+	border:1px solid rgba(0,0,0,0.2);
+	color:#1b75da;
+	font-family:arial;
+	font-style:italic;
+	text-align:center;
+	font-size:15px;
+	height:50px;
+	line-height:50px;
+	margin-top:40px;
+}
+.footer
+{
+	float:left;
+	width:985px;
+	height:50px;
+	font-family:arial;
+	color:#474646;
+	font-size:12px;
+	line-height:80px;
+	padding-left:5px;
+}

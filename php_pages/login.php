@@ -1,0 +1,111 @@
+<?php
+	include_once('connect.php');
+	if(isset($_POST['login_button']))
+	{
+		$user_id=($_POST['user_id']);
+		$passwd=md5($_POST['pass']);
+	}
+	else
+	{
+		header("location:../");
+		exit;
+	}
+	if(substr($user_id,0,4)==2500)
+	{
+		$query=pg_query("SELECT ddopass FROM mddo WHERE ddocode='$user_id'");
+		if(pg_num_rows($query))
+		{
+			$result=pg_fetch_array($query,null,PGSQL_ASSOC);
+			if($passwd==$result['ddopass'])
+			{
+				session_start();
+				$_SESSION['pao_user']=$user_id;
+				session_write_close();
+				header("location:../ddo/");
+				exit;
+
+			}
+			else
+			{
+				session_start();
+				$_SESSION['pao_error']="Please enter the correct password";
+				session_write_close();
+				header("location:../");
+				exit;
+			}
+		}
+		else
+		{
+			session_start();
+			$_SESSION['pao_error']="Please enter the correct user name";
+			session_write_close();
+			header("location:../");
+			exit;
+		}
+	}
+	else
+	{
+		$query=pg_query("SELECT * FROM users WHERE userid='$user_id'");
+		if(pg_num_rows($query))
+		{
+			$result=pg_fetch_array($query,null,PGSQL_ASSOC);
+			if($passwd==$result['password'])
+			{
+				session_start();
+				$_SESSION['pao_user']=$user_id;
+				session_write_close();
+				$role=$result['roleid'];
+				if($role=='7')
+				{
+					header("location:../bill_section/");
+				}
+				elseif($role=='3')
+				{
+					header("location:../auditor/");
+				}
+				elseif($role=='10')
+				{
+					header("location:../supt/");
+				}
+				elseif($role=='11')
+				{
+					header("location:../apao/");
+				}
+				elseif($role=='12')
+				{
+					header("location:../pao/");
+				}
+				elseif($role=='2')
+				{
+					header("location:../chq/");
+				}
+				elseif($role=='13')
+				{
+					header("location:../govt/");
+				}
+				elseif($role=='20')
+				{
+					header("location:../delivery/");
+				}
+				exit;
+
+			}
+			else
+			{
+				session_start();
+				$_SESSION['pao_error']="Please enter the correct password";
+				session_write_close();
+				header("location:../");
+				exit;
+			}
+		}
+		else
+		{
+			session_start();
+			$_SESSION['pao_error']="Please enter the correct user name";
+			session_write_close();
+			header("location:../");
+			exit;
+		}
+	}
+?>
